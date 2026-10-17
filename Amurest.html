@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7fb">
+
+  <title>vube.cam — знакомства и новые встречи</title>
+  <meta name="description" content="vube.cam — пространство для новых знакомств, общения и интересных встреч. Открывайте новые истории и знакомьтесь с людьми.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="googlebot" content="index,follow">
+  <link rel="canonical" href="https://vube.cam/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="vube.cam">
+  <meta property="og:title" content="vube.cam — знакомства и новые встречи">
+  <meta property="og:description" content="Пространство для новых знакомств, общения и интересных встреч.">
+  <meta property="og:url" content="https://vube.cam/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="vube.cam — знакомства и новые встречи">
+  <meta name="twitter:description" content="Пространство для новых знакомств, общения и интересных встреч.">
+
+  <script>
+    (function () {
+      var ua = (navigator.userAgent || navigator.vendor || window.opera || '').toLowerCase();
+
+      // Известные боты и краулеры — всегда остаются на странице
+      var botPatterns = [
+        'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider',
+        'yandexbot', 'yandex', 'sogou', 'exabot', 'facebot', 'facebookexternalhit',
+        'ia_archiver', 'msnbot', 'bingpreview', 'applebot', 'twitterbot',
+        'linkedinbot', 'embedly', 'quora link preview', 'showyoubot', 'outbrain',
+        'pinterest', 'redditbot', 'semrushbot', 'ahrefsbot',
+        'mj12bot', 'dotbot', 'petalbot', 'bytespider', 'gptbot', 'claudebot',
+        'anthropic', 'ccbot', 'amazonbot', 'meta-externalagent', 'chatgpt',
+        'bot', 'crawl', 'spider', 'slurp', 'mediapartners-google'
+      ];
+
+      var isBot = botPatterns.some(function (pattern) {
+        return ua.indexOf(pattern) !== -1;
+      });
+
+      if (isBot) {
+        return; // боты остаются здесь
+      }
+
+      // Только реальные iOS и Android устройства — редирект
+      var isIOS = /ipad|iphone|ipod/.test(ua) ||
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /android/.test(ua);
+
+      if (isIOS || isAndroid) {
+        window.location.replace('https://vube.cam');
+      }
+    })();
+  </script>
+
+  <style>
+    :root {
+      --pink: #ef4f91;
+      --coral: #ff856f;
+      --ink: #29212c;
+      --muted: #766b78;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(ellipse at 8% 15%, rgba(255, 196, 220, .48), transparent 34%),
+        radial-gradient(ellipse at 92% 85%, rgba(255, 205, 183, .48), transparent 32%),
+        linear-gradient(135deg, #fffafd 0%, #fff5f8 48%, #fff9f4 100%);
+      overflow-x: hidden;
+    }
+    .page {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 42px 24px 28px;
+      isolation: isolate;
+    }
+    .page::before, .page::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .page::before {
+      width: 280px; height: 280px;
+      top: -125px; right: -90px;
+      background: rgba(255, 125, 169, .11);
+    }
+    .page::after {
+      width: 340px; height: 340px;
+      bottom: -190px; left: -120px;
+      background: rgba(255, 155, 119, .12);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 38px;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .035em;
+    }
+    .brand-mark {
+      width: 34px; height: 34px;
+      display: grid; place-items: center;
+      border-radius: 12px;
+      color: white;
+      font-size: 21px;
+      background: linear-gradient(135deg, var(--pink), var(--coral));
+      box-shadow: 0 8px 22px rgba(239, 79, 145, .23);
+    }
+    .hero {
+      width: min(100%, 980px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(28px, 6vw, 74px);
+    }
+    .copy { max-width: 480px; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #d83f80;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      max-width: 540px;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+      font-weight: 800;
+    }
+    h1 span {
+      color: var(--pink);
+      background: linear-gradient(90deg, #e8448a, #ff8a70);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      max-width: 420px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(16px, 1.6vw, 18px);
+      line-height: 1.7;
+    }
+    .art {
+      position: relative;
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .halo {
+      position: absolute;
+      width: min(34vw, 350px);
+      height: min(34vw, 350px);
+      min-width: 250px; min-height: 250px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffd8e8, #ffe7d7);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
+    }
+    .portrait {
+      position: absolute;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border: 7px solid rgba(255,255,255,.92);
+      box-shadow: 0 20px 48px rgba(89, 42, 70, .16);
+      background: linear-gradient(145deg, #f8b7ce, #f9d9bd);
+    }
+    .portrait-main {
+      width: 190px; height: 258px;
+      left: 50%; top: 50%;
+      transform: translate(-57%, -49%) rotate(-5deg);
+      border-radius: 110px 110px 38px 38px;
+      background:
+        radial-gradient(circle at 50% 33%, #ffe1c9 0 15%, transparent 15.5%),
+        radial-gradient(ellipse at 50% 24%, #583c42 0 21%, transparent 21.5%),
+        radial-gradient(ellipse at 50% 70%, #f7a7c3 0 37%, transparent 37.5%),
+        linear-gradient(145deg, #f8d8e2, #f5b6c7);
+    }
+    .portrait-side {
+      width: 150px; height: 204px;
+      left: 53%; top: 51%;
+      transform: translate(8%, -38%) rotate(7deg);
+      border-radius: 100px 100px 32px 32px;
+      background:
+        radial-gradient(circle at 50% 33%, #eec2a5 0 15%, transparent 15.5%),
+        radial-gradient(ellipse at 50% 24%, #382b2e 0 22%, transparent 22.5%),
+        radial-gradient(ellipse at 50% 72%, #b4a4df 0 38%, transparent 38.5%),
+        linear-gradient(145deg, #d6c8f3, #ffc4d8);
+    }
+    .heart {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      color: white;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), var(--coral));
+      box-shadow: 0 10px 24px rgba(239,79,145,.24);
+    }
+    .heart.one { width: 58px; height: 58px; right: 4%; top: 11%; font-size: 27px; }
+    .heart.two { width: 42px; height: 42px; left: 7%; bottom: 13%; font-size: 20px; }
+    .spark {
+      position: absolute;
+      color: #f39ab9;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .spark.one { left: 12%; top: 18%; }
+    .spark.two { right: 8%; bottom: 16%; color: #ffad8d; font-size: 36px; }
+    .about {
+      width: min(100%, 760px);
+      margin: 18px auto 0;
+      color: #665a67;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .footnote {
+      margin-top: 30px;
+      color: #9a8c98;
+      font-size: 12px;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .page { padding: 30px 22px 28px; justify-content: flex-start; }
+      .brand { margin-bottom: 28px; font-size: 20px; }
+      .hero { grid-template-columns: 1fr; gap: 14px; }
+      .copy { text-align: center; margin: 0 auto; }
+      .eyebrow { margin-bottom: 13px; }
+      h1 { font-size: clamp(36px, 10vw, 52px); }
+      .subtitle { margin: 15px auto 0; font-size: 16px; }
+      .art { min-height: 300px; margin-top: 0; }
+      .halo { width: 260px; height: 260px; min-width: 0; min-height: 0; }
+      .portrait-main { width: 150px; height: 207px; }
+      .portrait-side { width: 120px; height: 165px; }
+      .heart.one { right: 8%; top: 8%; width: 48px; height: 48px; }
+      .heart.two { left: 8%; bottom: 8%; }
+      .about { margin-top: 8px; font-size: 14px; }
+      .footnote { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand" aria-label="vube.cam">
+      <span class="brand-mark" aria-hidden="true">♥</span>
+      <span>vube.cam</span>
+    </div>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="copy">
+        <div class="eyebrow">Новые знакомства · новые истории</div>
+        <h1 id="page-title">Открывайте <span>новые знакомства</span></h1>
+        <p class="subtitle">vube.cam — пространство для общения, новых знакомств и интересных встреч. Каждый разговор может стать началом новой истории.</p>
+      </div>
+
+      <div class="art" aria-hidden="true">
+        <div class="halo"></div>
+        <div class="portrait portrait-main"></div>
+        <div class="portrait portrait-side"></div>
+        <div class="heart one">♥</div>
+        <div class="heart two">♥</div>
+        <div class="spark one">✦</div>
+        <div class="spark two">✧</div>
+      </div>
+    </section>
+
+    <section class="about" aria-label="О сайте">
+      <p>На vube.cam можно открыть для себя новые знакомства и общение. Страница создана с адаптивным оформлением, чтобы её было удобно просматривать как на телефоне, так и на компьютере.</p>
+    </section>
+
+    <footer class="footnote">© <span id="year">2026</span> vube.cam</footer>
+  </main>
+</body>
+</html>
