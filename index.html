@@ -511,6 +511,125 @@
       .show-mobile-actions .hero { display: block; }
       .show-mobile-actions .copy { width: 100%; }
     }
+
+    /* VUBE MOBILE 18+: only iOS/Android. Background rules above are untouched. */
+    .show-mobile-actions .page {
+      min-height: 100vh;
+      min-height: 100dvh;
+      justify-content: center;
+      padding: 26px 20px 20px;
+    }
+    .show-mobile-actions .brand {
+      margin-bottom: 22px;
+      font-size: 24px;
+    }
+    .show-mobile-actions .hero {
+      width: 100%;
+      display: block;
+    }
+    .show-mobile-actions .copy {
+      width: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .show-mobile-actions .eyebrow {
+      margin-bottom: 11px;
+      font-size: 12px;
+      letter-spacing: .13em;
+    }
+    .show-mobile-actions h1 {
+      margin: 0 auto;
+      max-width: 460px;
+      font-size: clamp(35px, 8.8vw, 51px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+    .show-mobile-actions .subtitle {
+      max-width: 390px;
+      margin: 18px auto 0;
+      font-size: clamp(16px, 4.4vw, 19px);
+      line-height: 1.5;
+    }
+    .show-mobile-actions .mobile-actions {
+      max-width: 430px;
+      margin: 21px auto 0;
+      padding: 5px;
+    }
+    .show-mobile-actions .mobile-actions-title,
+    .show-mobile-actions .mobile-actions-subtitle {
+      display: none;
+    }
+    .show-mobile-actions .mobile-actions-buttons { gap: 13px; }
+    .show-mobile-actions .mobile-action-chat {
+      min-height: 76px;
+      border-radius: 21px;
+      font-size: 20px;
+    }
+    .show-mobile-actions .mobile-action-telegram {
+      min-height: 59px;
+      border-radius: 18px;
+    }
+    .show-mobile-actions .footnote { margin-top: 22px; }
+    @media (max-height: 650px) {
+      .show-mobile-actions .brand { margin-bottom: 13px; }
+      .show-mobile-actions .subtitle { margin-top: 12px; }
+      .show-mobile-actions .mobile-actions { margin-top: 14px; }
+      .show-mobile-actions .footnote { margin-top: 15px; }
+    }
+
+    /* Animated GIFs as button backgrounds — iOS and Android only.
+       Keep button text in HTML for automatic RU / EN translation. */
+    .show-mobile-actions .mobile-action-chat,
+    .show-mobile-actions .mobile-action-telegram {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, .68);
+    }
+    .show-mobile-actions .mobile-action-chat {
+      background-image: url('https://i.postimg.cc/Z5dj2B01/In-Shot-20261111-191932470.gif'),
+                        linear-gradient(115deg, #ee3b91, #ff6592 52%, #ff936f);
+    }
+    .show-mobile-actions .mobile-action-telegram {
+      background-image: url('https://i.postimg.cc/yYWLhrKy/In-Shot-20261111-191749298.gif'),
+                        linear-gradient(110deg, #189bdc, #40b5ea);
+    }
+    /* The GIFs animate themselves; prevent a second shimmer from masking them. */
+    .show-mobile-actions .mobile-action-button::after { display: none; }
+
+    /* Mobile-only pulse: smoothly scale the entire GIF-backed button. */
+    .show-mobile-actions .mobile-action-chat {
+      animation: vube-chat-scale-pulse 2.15s ease-in-out infinite;
+      transform-origin: center center;
+      will-change: transform;
+    }
+    .show-mobile-actions .mobile-action-telegram {
+      animation: vube-telegram-scale-pulse 2.85s ease-in-out infinite;
+      animation-delay: -.65s;
+      transform-origin: center center;
+      will-change: transform;
+    }
+    @keyframes vube-chat-scale-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 8px 22px rgba(232,68,138,.30), 0 0 0 0 rgba(238,59,145,.27); }
+      50% { transform: scale(1.045); box-shadow: 0 13px 34px rgba(232,68,138,.43), 0 0 0 5px rgba(238,59,145,0); }
+    }
+    @keyframes vube-telegram-scale-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 6px 17px rgba(34,158,217,.19), 0 0 0 0 rgba(34,158,217,.18); }
+      50% { transform: scale(1.028); box-shadow: 0 10px 24px rgba(34,158,217,.29), 0 0 0 4px rgba(34,158,217,0); }
+    }
+    .show-mobile-actions .mobile-action-button:active {
+      animation-play-state: paused;
+      transform: scale(.985);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .show-mobile-actions .mobile-action-chat,
+      .show-mobile-actions .mobile-action-telegram {
+        animation: none;
+        will-change: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -586,6 +705,37 @@
     })();
   </script>
 
+
+
+  <!-- Copy for the mobile-only 18+ landing. Desktop HTML, design and links stay as before. -->
+  <script>
+    (function () {
+      if (!document.documentElement.classList.contains('show-mobile-actions')) return;
+      var language = (navigator.language ||
+        (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+      var russian = /^ru(?:-|$)/.test(language);
+      var copy = russian ? {
+        eyebrow: 'ФЛИРТ · ЗНАКОМСТВА · 18+',
+        lead: 'Не всё можно ',
+        accent: 'показать здесь 🔥',
+        subtitle: 'Флирт, знакомства и немного интриги. Только для взрослых 18+.',
+        button: '💋 Продолжить'
+      } : {
+        eyebrow: 'FLIRT · DATING · 18+',
+        lead: 'Not everything can be ',
+        accent: 'shown here 🔥',
+        subtitle: 'Flirt, meet, and see where it leads. Adults only (18+).',
+        button: '💋 Continue'
+      };
+      document.documentElement.lang = russian ? 'ru' : 'en';
+      document.querySelector('.eyebrow').textContent = copy.eyebrow;
+      var heading = document.getElementById('page-title');
+      heading.firstChild.nodeValue = copy.lead;
+      heading.querySelector('span').textContent = copy.accent;
+      document.querySelector('.subtitle').textContent = copy.subtitle;
+      document.getElementById('mobile-start-chat-text').textContent = copy.button;
+    })();
+  </script>
 
   <!-- GA4: click tracking for Start Chat and Telegram (site vube.cam). -->
   <script>
