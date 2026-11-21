@@ -579,9 +579,13 @@
       .show-mobile-actions .footnote { margin-top: 15px; }
     }
 
-    /* Без GIF-фонов: только цветные градиенты и лёгкая пульсация. */
+    /* GIF возвращён только на кнопку «Приват чат»; остальное без изменений. */
     .show-mobile-actions .mobile-action-chat {
-      background: linear-gradient(115deg, #ee3b91, #ff6592 52%, #ff936f);
+      background-image: url('https://i.postimg.cc/Z5dj2B01/In-Shot-20261111-191932470.gif'),
+                        linear-gradient(115deg, #ee3b91, #ff6592 52%, #ff936f);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     .show-mobile-actions .mobile-action-telegram {
       background: linear-gradient(110deg, #189bdc, #40b5ea);
@@ -649,7 +653,7 @@
           <div class="mobile-actions-buttons">
             <a class="mobile-action-button mobile-action-chat" href="https://sunati.top/search?key=qenbg-np8ax&sub_id1=vube1" id="mobile-start-chat" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
-              <span id="mobile-start-chat-text">Начать общение 💬</span>
+              <span id="mobile-start-chat-text">Приват чат 💬</span>
             </a>
             <a class="mobile-action-button mobile-action-telegram" id="mobile-telegram" href="https://t.me/pys365" target="_blank" rel="noopener noreferrer" aria-label="Приватный контент 18+ — Telegram">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21.4 4.6 18.3 19.2c-.23 1.03-.85 1.28-1.72.8l-4.76-3.51-2.3 2.2c-.25.25-.46.46-.95.46l.34-4.85 8.84-7.98c.38-.34-.09-.53-.6-.19l-10.93 6.88-4.7-1.47c-1.02-.32-1.04-1.02.22-1.51L20.1 2.9c.85-.32 1.6.2 1.3 1.7Z"/></svg>
@@ -688,7 +692,7 @@
       document.getElementById('mobile-actions-subtitle').textContent = russian
         ? 'Выберите удобный вариант, чтобы продолжить' : 'Pick the option that works best for you';
       document.getElementById('mobile-start-chat-text').textContent = russian
-        ? 'Начать общение 💬' : 'Start Chat 💬';
+        ? 'Приват чат 💬' : 'Private Chat 💬';
       document.getElementById('desktop-telegram-text').textContent = russian
         ? 'Открыть Telegram' : 'Open Telegram';
       var telegramMobile = document.getElementById('mobile-telegram');
@@ -713,13 +717,13 @@
         lead: 'Не всё можно ',
         accent: 'показать здесь 🔥',
         subtitle: 'Флирт, знакомства и немного интриги. Только для взрослых 18+.',
-        button: 'Начать общение 💬'
+        button: 'Приват чат 💬'
       } : {
         eyebrow: 'FLIRT · DATING · 18+',
         lead: 'Not everything can be ',
         accent: 'shown here 🔥',
         subtitle: 'Flirt, meet, and see where it leads. Adults only (18+).',
-        button: 'Start Chat 💬'
+        button: 'Private Chat 💬'
       };
       document.documentElement.lang = russian ? 'ru' : 'en';
       document.querySelector('.eyebrow').textContent = copy.eyebrow;
