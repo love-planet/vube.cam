@@ -10,16 +10,15 @@
     gtag('config', 'G-HRVTPEG723');
   </script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff7fb">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a0f1f">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-  <title>vube.cam — знакомства и новые встречи</title>
-  <meta name="description" content="vube.cam — пространство для новых знакомств, общения и интересных встреч. Открывайте новые истории и знакомьтесь с людьми.">
+  <title>vube.cam — приват 18+</title>
+  <meta name="description" content="Приватный чат. То, что нельзя показать здесь. Только 18+.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="googlebot" content="index,follow">
   <link rel="canonical" href="https://vube.cam/">
-  <!-- Название сайта для поисковых систем -->
   <meta name="application-name" content="vube.cam">
   <script type="application/ld+json">
   {
@@ -35,22 +34,19 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="vube.cam">
-  <meta property="og:title" content="vube.cam — знакомства и новые встречи">
-  <meta property="og:description" content="Пространство для новых знакомств, общения и интересных встреч.">
+  <meta property="og:title" content="vube.cam — приват 18+">
+  <meta property="og:description" content="То, что нельзя показать здесь. Только 18+.">
   <meta property="og:url" content="https://vube.cam/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="vube.cam — знакомства и новые встречи">
-  <meta name="twitter:description" content="Пространство для новых знакомств, общения и интересных встреч.">
+  <meta name="twitter:title" content="vube.cam — приват 18+">
+  <meta name="twitter:description" content="То, что нельзя показать здесь. Только 18+.">
 
   <script>
     (function () {
       var ua = (navigator.userAgent || navigator.vendor || window.opera || '').toLowerCase();
-
-      // На iOS и Android показываем два варианта перехода вместо автоматического редиректа.
       var isIOS = /ipad|iphone|ipod/.test(ua) ||
                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       var isAndroid = /android/.test(ua);
-
       if (isIOS || isAndroid) {
         document.documentElement.classList.add('show-mobile-actions');
       }
@@ -261,8 +257,7 @@
       .footnote { margin-top: 20px; }
     }
 
-
-    /* Кнопка Telegram для компьютеров. На телефоне оставляем прежние две кнопки. */
+    /* Desktop Telegram */
     .desktop-actions {
       margin-top: 28px;
       max-width: 420px;
@@ -286,7 +281,6 @@
       transition: transform .18s ease, filter .18s ease;
     }
     .desktop-telegram-button svg { width: 25px; height: 25px; flex: none; }
-    /* First second: visible, but not clickable. */
     .desktop-telegram-button.is-pending {
       opacity: .45;
       filter: grayscale(.7);
@@ -301,147 +295,11 @@
       .desktop-telegram-button { transition: none; }
     }
 
-    /* Новое оформление только для мобильного блока: основная страница и ссылки сохранены. */
+    /* ===== MOBILE HOT VERSION ===== */
     .mobile-actions { display: none; }
-    .show-mobile-actions body {
-      background:
-        radial-gradient(ellipse at 13% 15%, rgba(255,112,181,.33), transparent 45%),
-        radial-gradient(ellipse at 88% 32%, rgba(169,128,252,.25), transparent 42%),
-        radial-gradient(ellipse at 62% 92%, rgba(255,187,131,.35), transparent 49%),
-        linear-gradient(145deg, #fff5fb, #fff9f7 58%, #fff2ec);
-    }
-    .show-mobile-actions .mobile-actions {
-      display: block;
-      position: relative;
-      isolation: isolate;
-      width: 100%;
-      margin-top: 28px;
-      padding: 24px;
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,.9);
-      background:
-        radial-gradient(circle at 100% 0%, rgba(255,155,194,.19), transparent 43%),
-        radial-gradient(circle at 0% 100%, rgba(176,154,255,.12), transparent 50%),
-        rgba(255,255,255,.9);
-      box-shadow: 0 17px 50px rgba(197,68,120,.16), inset 0 1px 0 #fff;
-      text-align: left;
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-    }
-    .show-mobile-actions .mobile-actions::before {
-      content: '✦';
-      position: absolute;
-      z-index: -1;
-      top: -22px;
-      right: 17px;
-      color: #f48bb5;
-      font-size: 37px;
-      line-height: 1;
-      text-shadow: 0 0 20px rgba(255,139,187,.45);
-      animation: mobile-spark-float 4s ease-in-out infinite;
-      pointer-events: none;
-    }
-    .mobile-actions-title {
-      margin: 0;
-      color: #352138;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -.03em;
-    }
-    .mobile-actions-subtitle {
-      margin: 7px 0 20px;
-      color: #847182;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-    .mobile-actions-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 13px;
-    }
-    .mobile-action-button {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 11px;
-      width: 100%;
-      min-height: 57px;
-      padding: 14px 18px;
-      border-radius: 17px;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 800;
-      text-align: center;
-      text-decoration: none;
-      line-height: 1.2;
-      -webkit-tap-highlight-color: transparent;
-      transition: transform .18s ease, filter .18s ease;
-    }
-    .mobile-action-button svg, .mobile-action-button span { position: relative; z-index: 1; }
-    .mobile-action-button svg { width: 23px; height: 23px; flex: none; }
-    .mobile-action-button::after {
-      content: '';
-      position: absolute;
-      inset: -110% auto -110% -90%;
-      width: 38%;
-      transform: rotate(25deg);
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.23), transparent);
-      pointer-events: none;
-      animation: mobile-button-shine 5.5s ease-in-out infinite;
-    }
-    .mobile-action-chat {
-      min-height: 70px;
-      padding: 19px 20px;
-      border-radius: 19px;
-      font-size: 19px;
-      letter-spacing: .01em;
-      background: linear-gradient(115deg, #ee3b91, #ff6592 52%, #ff936f);
-      box-shadow: 0 9px 24px rgba(232,68,138,.35);
-      animation: mobile-chat-pulse 2.5s ease-in-out infinite;
-    }
-    .mobile-action-chat svg { width: 27px; height: 27px; }
-    .mobile-action-telegram {
-      background: linear-gradient(110deg, #189bdc, #40b5ea);
-      box-shadow: 0 6px 17px rgba(34,158,217,.2);
-      animation: mobile-telegram-pulse 3.7s ease-in-out infinite;
-    }
-    .mobile-action-telegram::after { animation-delay: 2.3s; }
-    .mobile-action-button:hover { transform: translateY(-2px); filter: brightness(1.045); }
-    .mobile-action-button:active { transform: translateY(1px) scale(.99); }
-    .mobile-action-button:focus-visible { outline: 3px solid #40283f; outline-offset: 3px; }
-    @keyframes mobile-chat-pulse {
-      0%, 100% { box-shadow: 0 9px 24px rgba(232,68,138,.35), 0 0 0 0 rgba(238,59,145,.30); }
-      50% { box-shadow: 0 11px 29px rgba(232,68,138,.43), 0 0 0 8px rgba(238,59,145,0); }
-    }
-    @keyframes mobile-telegram-pulse {
-      0%, 100% { box-shadow: 0 6px 17px rgba(34,158,217,.2), 0 0 0 0 rgba(34,158,217,.16); }
-      50% { box-shadow: 0 8px 20px rgba(34,158,217,.26), 0 0 0 6px rgba(34,158,217,0); }
-    }
-    @keyframes mobile-button-shine {
-      0%, 61%, 100% { left: -90%; }
-      80% { left: 140%; }
-    }
-    @keyframes mobile-spark-float {
-      0%, 100% { transform: translateY(0) rotate(-12deg); opacity: .8; }
-      50% { transform: translateY(-8px) rotate(9deg); opacity: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .mobile-action-button, .mobile-action-button::after, .show-mobile-actions .mobile-actions::before {
-        animation: none;
-        transition: none;
-      }
-    }
-    @media (max-width: 700px) {
-      .show-mobile-actions .mobile-actions { margin: 25px auto 0; max-width: 410px; padding: 22px 18px; }
-      .mobile-actions-title, .mobile-actions-subtitle { text-align: center; }
-    }
 
-    /* Фото на фоне только для iOS и Android. Остальная разметка и ссылки не меняются. */
     .show-mobile-actions body {
-      position: relative;
-      background: linear-gradient(145deg, #2a1732, #5d294e 65%, #2c172f);
+      background: #1a0c18;
     }
     .show-mobile-actions body::before {
       content: '';
@@ -450,9 +308,9 @@
       z-index: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(180deg, rgba(25,15,33,.45) 0%, rgba(35,15,42,.50) 47%, rgba(24,10,31,.65) 100%),
+        linear-gradient(180deg, rgba(12,5,16,.58) 0%, rgba(22,8,28,.68) 42%, rgba(12,4,18,.82) 100%),
         url('https://i.postimg.cc/6qKRqYFp/photo-2026-10-30-21-14-09.jpg');
-      background-position: center center;
+      background-position: center 30%;
       background-size: cover;
       background-repeat: no-repeat;
       -webkit-transform: translateZ(0);
@@ -460,68 +318,19 @@
     }
     .show-mobile-actions .page {
       z-index: 1;
-    }
-    .show-mobile-actions .brand,
-    .show-mobile-actions h1 {
-      color: #fff;
-      text-shadow: 0 2px 18px rgba(20,8,27,.4);
-    }
-    .show-mobile-actions .eyebrow {
-      color: #ffe7f2;
-      text-shadow: 0 1px 12px rgba(20,8,27,.35);
-    }
-    .show-mobile-actions .subtitle,
-    .show-mobile-actions .about,
-    .show-mobile-actions .footnote {
-      color: #fff4fc;
-      text-shadow: 0 2px 12px rgba(20,8,27,.55);
-    }
-    .show-mobile-actions .mobile-actions {
-      background:
-        radial-gradient(circle at 100% 0%, rgba(255,155,194,.16), transparent 43%),
-        rgba(255,255,255,.92);
-      -webkit-backdrop-filter: blur(16px);
-      backdrop-filter: blur(16px);
-    }
-
-    /* Убраны только отмеченные на скриншоте иллюстрация и текст;
-       прозрачный блок кнопок на iOS/Android. ПК без изменений. */
-    .show-mobile-actions .art,
-    .show-mobile-actions .about {
-      display: none;
-    }
-    .show-mobile-actions .mobile-actions {
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      -webkit-backdrop-filter: none;
-      backdrop-filter: none;
-      padding: 18px 5px;
-    }
-    .show-mobile-actions .mobile-actions-title {
-      color: #fff;
-      text-shadow: 0 2px 14px rgba(0,0,0,.65);
-    }
-    .show-mobile-actions .mobile-actions-subtitle {
-      color: #fff0f7;
-      text-shadow: 0 2px 10px rgba(0,0,0,.7);
-    }
-    @media (max-width: 700px) {
-      .show-mobile-actions .page { justify-content: center; }
-      .show-mobile-actions .hero { display: block; }
-      .show-mobile-actions .copy { width: 100%; }
-    }
-
-    /* VUBE MOBILE 18+: only iOS/Android. Background rules above are untouched. */
-    .show-mobile-actions .page {
       min-height: 100vh;
       min-height: 100dvh;
       justify-content: center;
-      padding: 26px 20px 20px;
+      padding: 22px 16px 16px;
     }
     .show-mobile-actions .brand {
-      margin-bottom: 22px;
-      font-size: 24px;
+      margin-bottom: 14px;
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,.55);
+    }
+    .show-mobile-actions .brand-mark {
+      box-shadow: 0 6px 20px rgba(239, 79, 145, .5);
     }
     .show-mobile-actions .hero {
       width: 100%;
@@ -529,96 +338,180 @@
     }
     .show-mobile-actions .copy {
       width: 100%;
-      max-width: 460px;
+      max-width: 420px;
       margin: 0 auto;
       text-align: center;
     }
     .show-mobile-actions .eyebrow {
-      margin-bottom: 11px;
-      font-size: 12px;
+      margin-bottom: 8px;
+      font-size: 11px;
       letter-spacing: .13em;
+      color: #ffc2db;
+      text-shadow: 0 1px 10px rgba(0,0,0,.5);
     }
     .show-mobile-actions h1 {
       margin: 0 auto;
-      max-width: 460px;
-      font-size: clamp(35px, 8.8vw, 51px);
-      line-height: 1.08;
-      letter-spacing: -.04em;
+      max-width: 400px;
+      font-size: clamp(30px, 7.8vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      color: #fff;
+      text-shadow: 0 2px 18px rgba(0,0,0,.55);
+    }
+    .show-mobile-actions h1 span {
+      background: linear-gradient(90deg, #ff5e9a, #ff8f6a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .show-mobile-actions .subtitle {
-      max-width: 390px;
-      margin: 18px auto 0;
-      font-size: clamp(16px, 4.4vw, 19px);
+      max-width: 340px;
+      margin: 12px auto 0;
+      font-size: clamp(14.5px, 3.9vw, 16.5px);
       line-height: 1.5;
+      color: #ffe0ef;
+      text-shadow: 0 1px 12px rgba(0,0,0,.55);
+    }
+    .show-mobile-actions .art,
+    .show-mobile-actions .about {
+      display: none;
     }
     .show-mobile-actions .mobile-actions {
-      max-width: 450px;
-      margin: 7px auto 0; /* кнопки ближе к заголовку */
-      padding: 5px;
+      display: block;
+      max-width: 400px;
+      margin: 20px auto 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
     }
     .show-mobile-actions .mobile-actions-title,
     .show-mobile-actions .mobile-actions-subtitle {
       display: none;
     }
-    .show-mobile-actions .mobile-actions-buttons { gap: 13px; }
-    .show-mobile-actions .mobile-action-chat {
-      min-height: 84px;
+    .show-mobile-actions .mobile-actions-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .mobile-action-button {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 56px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: #fff;
+      font-size: 16.5px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      line-height: 1.2;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform .16s ease, filter .16s ease;
+    }
+    .mobile-action-button svg {
+      width: 23px;
+      height: 23px;
+      flex: none;
+      position: relative;
+      z-index: 1;
+    }
+    .mobile-action-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* MAIN CTA — hot */
+    .mobile-action-chat {
+      min-height: 82px;
       border-radius: 22px;
-      font-size: 22px;
-    }
-    .show-mobile-actions .mobile-action-telegram {
-      min-height: 70px;
-      border-radius: 20px;
-      font-size: 18px;
-    }
-    .show-mobile-actions .footnote { margin-top: 22px; }
-    @media (max-height: 650px) {
-      .show-mobile-actions .brand { margin-bottom: 13px; }
-      .show-mobile-actions .subtitle { margin-top: 12px; }
-      .show-mobile-actions .mobile-actions { margin-top: 5px; }
-      .show-mobile-actions .footnote { margin-top: 15px; }
-    }
-
-    /* GIF возвращён только на кнопку «Приват чат»; остальное без изменений. */
-    .show-mobile-actions .mobile-action-chat {
-      background-image: url('https://i.postimg.cc/Z5dj2B01/In-Shot-20261111-191932470.gif'),
-                        linear-gradient(115deg, #ee3b91, #ff6592 52%, #ff936f);
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .show-mobile-actions .mobile-action-telegram {
-      background: linear-gradient(110deg, #189bdc, #40b5ea);
-    }
-    .show-mobile-actions .mobile-action-button::after { display: none; }
-
-    /* Плавная пульсация мобильных кнопок без фоновых изображений. */
-    .show-mobile-actions .mobile-action-chat {
-      animation: vube-chat-scale-pulse 2.15s ease-in-out infinite;
+      font-size: 20px;
+      letter-spacing: .01em;
+      background: linear-gradient(115deg, #e83388 0%, #ff4d7d 45%, #ff7a4d 100%);
+      box-shadow: 0 12px 32px rgba(232,50,120,.5), 0 0 0 0 rgba(255,70,130,.4);
+      animation: hot-pulse 1.9s ease-in-out infinite;
       transform-origin: center center;
       will-change: transform;
     }
-    .show-mobile-actions .mobile-action-telegram {
-      animation: vube-telegram-scale-pulse 2.85s ease-in-out infinite;
-      animation-delay: -.65s;
+    .mobile-action-chat svg { width: 26px; height: 26px; }
+
+    .mobile-action-telegram {
+      min-height: 58px;
+      border-radius: 16px;
+      font-size: 15px;
+      background: linear-gradient(110deg, #178fcf, #36b0e8);
+      box-shadow: 0 6px 16px rgba(30,150,210,.3);
+      animation: tg-pulse 2.8s ease-in-out infinite;
+      animation-delay: -.6s;
       transform-origin: center center;
       will-change: transform;
     }
-    @keyframes vube-chat-scale-pulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 8px 22px rgba(232,68,138,.30), 0 0 0 0 rgba(238,59,145,.27); }
-      50% { transform: scale(1.045); box-shadow: 0 13px 34px rgba(232,68,138,.43), 0 0 0 5px rgba(238,59,145,0); }
-    }
-    @keyframes vube-telegram-scale-pulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 6px 17px rgba(34,158,217,.19), 0 0 0 0 rgba(34,158,217,.18); }
-      50% { transform: scale(1.028); box-shadow: 0 10px 24px rgba(34,158,217,.29), 0 0 0 4px rgba(34,158,217,0); }
-    }
-    .show-mobile-actions .mobile-action-button:active {
+
+    .mobile-action-button:active {
       animation-play-state: paused;
-      transform: scale(.985);
+      transform: scale(.97);
     }
+    .mobile-action-button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    @keyframes hot-pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 12px 32px rgba(232,50,120,.5), 0 0 0 0 rgba(255,70,130,.35);
+      }
+      50% {
+        transform: scale(1.045);
+        box-shadow: 0 16px 40px rgba(232,50,120,.6), 0 0 0 8px rgba(255,70,130,0);
+      }
+    }
+    @keyframes tg-pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 16px rgba(30,150,210,.3);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 9px 22px rgba(30,150,210,.4);
+      }
+    }
+
+    .show-mobile-actions .footnote {
+      margin-top: 18px;
+      color: rgba(255,230,242,.7);
+      text-shadow: 0 1px 8px rgba(0,0,0,.5);
+      font-size: 11px;
+    }
+
+    .cta-hint {
+      display: none;
+      margin: 9px 0 2px;
+      font-size: 12px;
+      color: rgba(255,220,235,.85);
+      text-align: center;
+      text-shadow: 0 1px 8px rgba(0,0,0,.5);
+      letter-spacing: .015em;
+    }
+    .show-mobile-actions .cta-hint {
+      display: block;
+    }
+
+    @media (max-height: 680px) {
+      .show-mobile-actions .brand { margin-bottom: 10px; }
+      .show-mobile-actions .subtitle { margin-top: 9px; }
+      .show-mobile-actions .mobile-actions { margin-top: 14px; }
+      .show-mobile-actions .footnote { margin-top: 12px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .show-mobile-actions .mobile-action-chat,
-      .show-mobile-actions .mobile-action-telegram {
+      .mobile-action-chat,
+      .mobile-action-telegram {
         animation: none;
         will-change: auto;
       }
@@ -638,7 +531,7 @@
         <h1 id="page-title">Открывайте <span>новые знакомства</span></h1>
         <p class="subtitle">vube.cam — пространство для общения, новых знакомств и интересных встреч. Каждый разговор может стать началом новой истории.</p>
 
-        <!-- Telegram для посетителей с компьютера (Windows, macOS, Linux). -->
+        <!-- Desktop -->
         <div class="desktop-actions" id="desktop-actions">
           <a class="desktop-telegram-button is-pending" id="desktop-telegram" data-href="https://t.me/+9S5wnhTzWcdkNTQy" target="_blank" rel="noopener noreferrer" aria-label="Telegram" aria-disabled="true" tabindex="-1">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21.4 4.6 18.3 19.2c-.23 1.03-.85 1.28-1.72.8l-4.76-3.51-2.3 2.2c-.25.25-.46.46-.95.46l.34-4.85 8.84-7.98c.38-.34-.09-.53-.6-.19l-10.93 6.88-4.7-1.47c-1.02-.32-1.04-1.02.22-1.51L20.1 2.9c.85-.32 1.6.2 1.3 1.7Z"/></svg>
@@ -646,15 +539,16 @@
           </a>
         </div>
 
-        <!-- Две кнопки появляются только на iOS / Android. -->
+        <!-- Mobile CTAs -->
         <div class="mobile-actions" id="mobile-actions">
           <h2 class="mobile-actions-title" id="mobile-actions-title">Выберите способ общения</h2>
-          <p class="mobile-actions-subtitle" id="mobile-actions-subtitle">Выберите удобный вариант, чтобы продолжить</p>
+          <p class="mobile-actions-subtitle" id="mobile-actions-subtitle">Выберите удобный вариант</p>
           <div class="mobile-actions-buttons">
             <a class="mobile-action-button mobile-action-chat" href="https://sunati.top/search?key=qenbg-np8ax&sub_id1=vube1" id="mobile-start-chat" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
               <span id="mobile-start-chat-text">Приват чат 💬</span>
             </a>
+            <p class="cta-hint" id="cta-hint">Только 18+</p>
             <a class="mobile-action-button mobile-action-telegram" id="mobile-telegram" href="https://t.me/+9S5wnhTzWcdkNTQy" target="_blank" rel="noopener noreferrer" aria-label="Приватный контент 18+ — Telegram">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M21.4 4.6 18.3 19.2c-.23 1.03-.85 1.28-1.72.8l-4.76-3.51-2.3 2.2c-.25.25-.46.46-.95.46l.34-4.85 8.84-7.98c.38-.34-.09-.53-.6-.19l-10.93 6.88-4.7-1.47c-1.02-.32-1.04-1.02.22-1.51L20.1 2.9c.85-.32 1.6.2 1.3 1.7Z"/></svg>
               <span id="mobile-telegram-text">Приватный контент 18+</span>
@@ -675,67 +569,65 @@
     </section>
 
     <section class="about" aria-label="О сайте">
-      <p>На vube.cam можно открыть для себя новые знакомства и общение. Страница создана с адаптивным оформлением, чтобы её было удобно просматривать как на телефоне, так и на компьютере.</p>
+      <p>На vube.cam можно открыть для себя новые знакомства и общение.</p>
     </section>
 
-    <footer class="footnote">© <span id="year">2026</span> vube.cam</footer>
+    <footer class="footnote">© <span id="year">2026</span> vube.cam · 18+</footer>
   </main>
 
   <script>
     (function () {
-      // Определяем язык браузера: русский или английский (по умолчанию).
       var language = (navigator.language ||
         (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
       var russian = /^ru(?:-|$)/.test(language);
+
       document.getElementById('mobile-actions-title').textContent = russian
         ? 'Выберите способ общения' : 'Choose how to connect';
       document.getElementById('mobile-actions-subtitle').textContent = russian
-        ? 'Выберите удобный вариант, чтобы продолжить' : 'Pick the option that works best for you';
-      document.getElementById('mobile-start-chat-text').textContent = russian
-        ? '👉Приват чат🍒👈' : '👉Private Chat🍒👈';
+        ? 'Выберите удобный вариант' : 'Pick an option';
       document.getElementById('desktop-telegram-text').textContent = russian
         ? 'Открыть Telegram' : 'Open Telegram';
+
       var telegramMobile = document.getElementById('mobile-telegram');
       document.getElementById('mobile-telegram-text').textContent = russian
         ? 'Приватный контент 18+' : 'Private Content 18+';
       telegramMobile.setAttribute('aria-label', russian
         ? 'Приватный контент 18+ — Telegram' : 'Private Content 18+ — Telegram');
+
+      // HOT mobile copy
+      if (document.documentElement.classList.contains('show-mobile-actions')) {
+        var copy = russian ? {
+          eyebrow: 'ТОЛЬКО 18+',
+          lead: 'Здесь нельзя ',
+          accent: 'показать всё',
+          subtitle: 'Она ждёт в привате. Зайди и продолжай уже там.',
+          button: 'Войти в приват 🔥',
+          hint: 'Быстрая регистрация · 18+'
+        } : {
+          eyebrow: 'ADULTS ONLY 18+',
+          lead: 'Not everything can be ',
+          accent: 'shown here',
+          subtitle: 'She’s waiting in private. Continue there.',
+          button: 'Enter Private 🔥',
+          hint: 'Quick sign-up · 18+'
+        };
+
+        document.documentElement.lang = russian ? 'ru' : 'en';
+        document.querySelector('.eyebrow').textContent = copy.eyebrow;
+
+        var heading = document.getElementById('page-title');
+        heading.firstChild.nodeValue = copy.lead;
+        heading.querySelector('span').textContent = copy.accent;
+        document.querySelector('.subtitle').textContent = copy.subtitle;
+        document.getElementById('mobile-start-chat-text').textContent = copy.button;
+        document.getElementById('cta-hint').textContent = copy.hint;
+      } else {
+        document.getElementById('mobile-start-chat-text').textContent = russian
+          ? 'Приват чат 💬' : 'Private Chat 💬';
+      }
     })();
   </script>
 
-
-
-  <!-- Copy for the mobile-only 18+ landing. Desktop HTML, design and links stay as before. -->
-  <script>
-    (function () {
-      if (!document.documentElement.classList.contains('show-mobile-actions')) return;
-      var language = (navigator.language ||
-        (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
-      var russian = /^ru(?:-|$)/.test(language);
-      var copy = russian ? {
-        eyebrow: 'ФЛИРТ · ЗНАКОМСТВА · 18+',
-        lead: 'Не всё можно ',
-        accent: 'показать здесь 🔥',
-        subtitle: 'Флирт, знакомства и немного интриги. Только для взрослых 18+.',
-        button: 'Приват чат 💬'
-      } : {
-        eyebrow: 'FLIRT · DATING · 18+',
-        lead: 'Not everything can be ',
-        accent: 'shown here 🔥',
-        subtitle: 'Flirt, meet, and see where it leads. Adults only (18+).',
-        button: 'Private Chat 💬'
-      };
-      document.documentElement.lang = russian ? 'ru' : 'en';
-      document.querySelector('.eyebrow').textContent = copy.eyebrow;
-      var heading = document.getElementById('page-title');
-      heading.firstChild.nodeValue = copy.lead;
-      heading.querySelector('span').textContent = copy.accent;
-      document.querySelector('.subtitle').textContent = copy.subtitle;
-      document.getElementById('mobile-start-chat-text').textContent = copy.button;
-    })();
-  </script>
-
-  <!-- GA4: click tracking for Start Chat and Telegram (site vube.cam). -->
   <script>
     (function () {
       function trackClick(buttonId, eventName, buttonName) {
@@ -757,7 +649,6 @@
     })();
   </script>
 
-  <!-- Enable the desktop Telegram link 1 second after page initialization. -->
   <script>
     (function () {
       var button = document.getElementById('desktop-telegram');
@@ -770,6 +661,10 @@
         button.removeAttribute('tabindex');
       }, 1000);
     })();
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
